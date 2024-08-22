@@ -1,4 +1,4 @@
-let numbers: number[] = [11,23,34,24,12];
+var numbers: number[] = [11,23,34,24,12];
 console.log(numbers);
 console.log(numbers[0]);
 console.log(numbers[2]);

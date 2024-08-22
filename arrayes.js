@@ -8,3 +8,4 @@ console.log(numbers);
 var friends = ['Pooja', 'Vinita', 'Shikha'];
 console.log(friends);
 console.log(friends[2]);
+console.log(friends[1]);
