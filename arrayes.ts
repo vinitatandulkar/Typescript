@@ -65,3 +65,62 @@ console.log(vor[0][2]);
 console.log(vor[1][0]);
 console.log(vor[1][1]);
 console.log(vor[1][2]);
+
+
+//Passing an array to a Function
+
+let arrr:string[] = new Array("Car","Bike","Truck","Bus");
+
+//Passing Array in a function
+
+function display(arr_values:string[])
+{
+    for(let i=0;i < arr_values.length;i++) {
+        console.log(arrr[i]);
+    }
+}
+
+display(arrr);
+
+let brr:string[] = new Array("Jwala","neha","piya");
+
+function displays(brr_values:string[]){
+    for(let i = 0; i < brr_values.length; i++){
+        console.log(brr[i]);
+    }
+}
+
+displays(brr);
+
+//Spread operator
+
+let arr1 = [1,2,3];
+let arr2 = [4,5,6];
+
+//Create new array from existing array
+
+let copyArray = [...arr1];
+console.log("CopiedArray:" +copyArray);
+
+let newArray2 = [...arr2];
+console.log("NewArray:" +newArray2);
+
+let mergeArray = [...arr1, ...arr2];
+console.log("MergeArray:" +mergeArray);
+
+
+friends.forEach((value) => {
+    console.log(value.toUpperCase());
+    console.log(value.toLowerCase());
+});
+
+
+let newfriends = friends.map((value, index) => {
+    console.log(index, value);
+    return value.toUpperCase();
+});
+console.log(newfriends);
+
+fruits.forEach((data) => {
+    console.log(data.toUpperCase());
+});

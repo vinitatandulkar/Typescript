@@ -1,3 +1,12 @@
+var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
+    if (pack || arguments.length === 2) for (var i = 0, l = from.length, ar; i < l; i++) {
+        if (ar || !(i in from)) {
+            if (!ar) ar = Array.prototype.slice.call(from, 0, i);
+            ar[i] = from[i];
+        }
+    }
+    return to.concat(ar || Array.prototype.slice.call(from));
+};
 var numbers = [11, 23, 34, 24, 12];
 var varia = numbers.map(Math.log);
 console.log(numbers);
@@ -48,3 +57,41 @@ console.log(vor[0][2]);
 console.log(vor[1][0]);
 console.log(vor[1][1]);
 console.log(vor[1][2]);
+//Passing an array to a Function
+var arrr = new Array("Car", "Bike", "Truck", "Bus");
+//Passing Array in a function
+function display(arr_values) {
+    for (var i_1 = 0; i_1 < arr_values.length; i_1++) {
+        console.log(arrr[i_1]);
+    }
+}
+display(arrr);
+var brr = new Array("Jwala", "neha", "piya");
+function displays(brr_values) {
+    for (var i_2 = 0; i_2 < brr_values.length; i_2++) {
+        console.log(brr[i_2]);
+    }
+}
+displays(brr);
+//Spread operator
+var arr1 = [1, 2, 3];
+var arr2 = [4, 5, 6];
+//Create new array from existing array
+var copyArray = __spreadArray([], arr1, true);
+console.log("CopiedArray:" + copyArray);
+var newArray2 = __spreadArray([], arr2, true);
+console.log("NewArray:" + newArray2);
+var mergeArray = __spreadArray(__spreadArray([], arr1, true), arr2, true);
+console.log("MergeArray:" + mergeArray);
+friends.forEach(function (value) {
+    console.log(value.toUpperCase());
+    console.log(value.toLowerCase());
+});
+var newfriends = friends.map(function (value, index) {
+    console.log(index, value);
+    return value.toUpperCase();
+});
+console.log(newfriends);
+fruits.forEach(function (data) {
+    console.log(data.toUpperCase());
+});
